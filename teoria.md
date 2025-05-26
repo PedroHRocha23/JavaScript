@@ -53,3 +53,102 @@ let idade = 18;
 let status = idade >= 18 ? "Maior" : "Menor";
 console.log(status); // "Maior"
 ```
+
+## Condicionais if, else, else if
+
+```javascript
+let nota = 85;
+if (nota >= 90) {
+ console.log(“Super Aprovado!”);
+} else (nota >= 70) {
+ console.log(“Aprovado!”);
+} else if {
+ console.log(“Reprovado…”);
+}
+```
+
+## Switch case
+
+```javascript
+let dia = 2;
+switch (dia) {
+ case 1:
+    console.log(“Sábaado”);
+    break;
+ case 2:
+    console.log(“Domingo”);
+    break;
+ default:
+    console.log(“Dia de semana”);
+```
+
+## Loop for
+
+```javascript
+for (let i = 1; i <= 5; i++) {
+ console.log(i);
+}
+let frutas = [“Maçã”, “Banana”, “Uva”];
+for (let fruta of frutas) {
+ console.log(fruta);
+}
+let pessoa = { nome: “Maçã”, idade: 25, cidade: “SP” };
+for (let chave in pessoa) {
+ console.log(chave + ": " + pessoa[chave]);
+}
+```
+
+## Loop While
+
+```javascript
+let contador = 1;
+while (contador <= 5) {
+ console.log(contador);
+ contador++; // Incremento que evita loop infinito
+}
+```
+
+# Declaração de Funções
+
+## Declaração Tradicional
+
+```javascript
+function saudacao(nome) {
+ return "Olá, " + nome + "!";
+}
+console.log(saudacao("Ana")); // "Olá, Ana!"
+```
+## Valor Padrão
+
+```javascript
+function saudacao(nome = "Visitante") {
+ return "Olá, " + nome + "!";
+}
+console.log(saudacao()); // "Olá, Visitante!”
+```
+## Anônimas
+
+```javascript
+let contador = 1;
+const soma = function(a, b) {
+ return a + b;
+}
+console.log(soma(3, 4)); //7
+```
+## Funções de Seta
+
+```javascript
+const multiplicar = (a, b) => a * b;
+console.log(multiplicar(2, 3)); // 6
+```
+## Funções dentro de funções
+
+```javascript
+function quadrado(x) {
+ function multiplicar(y) {
+ return y * y;
+ }
+ return multiplicar(x);
+}
+console.log(quadrado(4)); // 16
+```
